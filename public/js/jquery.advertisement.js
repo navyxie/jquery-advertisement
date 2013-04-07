@@ -50,6 +50,7 @@ NAVY.Advertisement.prototype = {
             _this.makeNumber();//显示右下角的数字
         }
         _this.initEvent();//初始化事件
+        return this;
     },
     initEvent:function(){
         var _this = this;
@@ -78,6 +79,7 @@ NAVY.Advertisement.prototype = {
                 _this.startCarousel(1+currentSelectIndex);
             });
         }
+        return this;
     },
     /**
      * 开始移动
@@ -91,6 +93,7 @@ NAVY.Advertisement.prototype = {
             _this.setMargin(index);
             index++;
         },options.speed);
+        return this;
     },
     /**
      * 停止移动
@@ -99,6 +102,7 @@ NAVY.Advertisement.prototype = {
         if(this.intervalId){
             clearInterval(this.intervalId);
         }
+        return this;
     },
     /**
      * 设置内容对象的margin值，水平方向为marginLeft,垂直方向为marginTop
@@ -127,6 +131,7 @@ NAVY.Advertisement.prototype = {
         if(this.options.isNumber){
             this.changeNumberStatue(index);
         }
+        return this;
     },
     /**
      * 改变数字的显示状态
@@ -135,6 +140,7 @@ NAVY.Advertisement.prototype = {
     changeNumberStatue:function(index){
         var numberListObjs = this.numberListObjs;
         numberListObjs.removeClass('selected').eq(index).addClass('selected');
+        return this;
     },
     /**
      * 生成右下角数字的函数
@@ -154,5 +160,6 @@ NAVY.Advertisement.prototype = {
         this.WrapperObj.append(numberHtml.join(''));
         this.numberWrapperObj = this.WrapperObj.find('.numberWrapper');
         this.numberListObjs = this.numberWrapperObj.find('.numberList');
+        return this;
     }
 };
