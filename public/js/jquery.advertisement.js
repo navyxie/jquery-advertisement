@@ -7,7 +7,7 @@
  * date 2013-04-06
  */
 var NAVY = NAVY || {};
-NAVY.Carousel = function(targetObj,containerObj,WrapperObj,options){
+NAVY.Advertisement = function(targetObj,containerObj,WrapperObj,options){
     this.WrapperObj = $(WrapperObj);//内容对象的容器
     this.containerObj = this.WrapperObj.find(containerObj);//内容对象
     this.targetObjs = this.containerObj.find(targetObj);//目标移动对象
@@ -27,7 +27,7 @@ NAVY.Carousel = function(targetObj,containerObj,WrapperObj,options){
     this.options = defaultOptions;
     this.init();//初始化
 };
-NAVY.Carousel.prototype = {
+NAVY.Advertisement.prototype = {
     init:function(){
         var _this = this;
         var options = _this.options;
