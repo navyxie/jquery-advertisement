@@ -2,3 +2,53 @@ jquery-advertisement
 ====================
 
 基于jquery的广告图片轮播，支持水平方向和垂直方向
+
+demo:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Advertisement</title>
+    <link rel="stylesheet" type="text/css" href="public/css/advertisement.css" />
+    <script type="text/javascript" src="public/js/jquery.js"></script>
+    <script type="text/javascript" src="public/js/jquery.advertisement.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: none;
+        }
+        #wrapper{
+            width: 300px;
+            height: 250px;
+            background: blue;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        #content{
+            width: 100%;
+        }
+        #content .list{
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <ul id="content">
+            <li class="list"><img src="http://i.mmcdn.cn/simba/img/T1uzdUXD0cXXb1upjX.jpg" /></li>
+            <li class="list"><img src="http://i.mmcdn.cn/simba/img/T1H20HXqVhXXb1upjX.jpg" /></li>
+            <li class="list"><img src="http://i.mmcdn.cn/simba/img/T1uzdUXD0cXXb1upjX.jpg" /></li>
+            <li class="list"><img src="http://i.mmcdn.cn/simba/img/T1H20HXqVhXXb1upjX.jpg" /></li>
+        </ul>
+    </div>
+<script type="text/javascript">
+    new NAVY.Advertisement('.list','#content','#wrapper',{direction:'horizontal'});
+</script>
+</body>
+</html>
